@@ -1,0 +1,50 @@
+<div class="card" style="margin-top: 10px;">
+    <div class="card-header">
+        <h4>Instalando o postgresql ubuntu</h4> 
+    </div>
+    <div class="card-body">
+        <p>> sudo apt-get update</p>
+        <p>> sudo apt-get install postgresql postgresql-contrib</p>
+    </div>
+ </div>
+ <div class="card" style="margin-top: 10px;">
+    <div class="card-header">
+        <h4>Configurando postgresql</h4> 
+    </div>
+
+    <div class="card-body">
+        <p>> su - postgres</p>
+        <p>> psql</p>
+        <p>> createuser --interactive --pwprompt</p>
+        <p>
+         Enter name of role to add: cleopatra
+         Enter password for new role:
+         Enter it again:
+         Shall the new role be a superuser? (y/n) y
+        </p>
+        <p>
+         > createdb -O cleopatra egypt
+        </p>
+        <p>
+         > sudo nano /etc/postgresql/10/main/postgresql.conf
+     
+         substituir
+         #listen_addresses = 'localhost'
+         listen_addresses = '*'
+        </p>
+        <p>
+         > sudo nano /etc/postgresql/10/main/pg_hba.conf
+         substituir
+         host    all             all             127.0.0.1/32            md5
+         host    all             all             0.0.0.0/0            md5
+        </p>
+        <p>
+            ativar firewall
+           > sudo ufw allow 5432/tcp
+        </p>
+        <p>
+         > sudo systemctl restart postgresql
+         > psql -h {{'{server_ip}'}} -d egypt -U cleopatra
+        </p>
+    </div>
+</div>

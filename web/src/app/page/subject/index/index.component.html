@@ -1,0 +1,28 @@
+
+  <h3>Subject</h3> 
+  <div class="form-row">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">
+        <a routerLink="/subject/new" class="btn btn-primary  btn-sm" routerLinkActive="active"><i class="fas fa-plus"></i></a>
+      </th>
+      <th scope="col">Title</th>
+      <th scope="col">Text</th>
+      <th scope="col">Controle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let subject of subjects">
+      <td  class="text-center"> <img style="width: 35px;" [src]="image_safe(subject.image)"></td>
+      <td>{{subject.title}}</td>
+      <td>{{subject.text}}</td> 
+      <td style="width: 122px;">
+        <button style="margin-left: 1px;" class="btn btn-outline-primary btn-sm"><i class="fas fa-edit"></i></button>
+        <button style="margin-left: 1px;" class="btn btn-outline-secondary btn-sm"><i class="fas fa-align-justify"></i></button>
+        <button style="margin-left: 1px;" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>

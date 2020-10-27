@@ -1,0 +1,14 @@
+<div class="row" @enterState>
+    <app-card class="col-md-3 item-card" title="Angular" link="#" imagem="/assets/img/angular.svg">Angular é uma linguagem OpenSource, e utiliza-se TypeScript sendo uma novidade para quem desenvolve em frontend. É orientada a componentes e mantida pela google.</app-card>
+    <app-card class="col-md-3 item-card" title="ASP.NET core" imagem="/assets/img/net_core.png" link="#">É uma plataforma para web, se utiliza de conceitos MVC, foi desenvolvida pela microsoft, é uma linguagem é estaticamente tipada e mantida pela Microsoft.</app-card>
+    <app-card class="col-md-3 item-card" title="Ruby on Rails" link="#" imagem="/assets/img/ruby.png">Essa é das minha tecnologia, ela é dinamicamente tipada o que dar muita liberdade ao desenvolver, muito ágil, produtivo e sua plataforma de desenvolvimento é leve.</app-card>
+    <app-card class="col-md-3 item-card" title="C#" link="#" imagem="/assets/img/csharp.svg"> Essa é outra excelente tecnologia para backend, atualmente ela está entrando para o mundo do CLI (Comand-Line Iterface) Interface por linha de comando.</app-card>
+    <app-card class="col-md-3 item-card" title="JavaScript" link="#" imagem="/assets/img/javascript.svg">Essa é a tecnologia mais universal que há, na verdade ela é a mais suportada e a unica que roda nos browse e atualmente entrando para o mundo do backend.</app-card>
+    <app-card class="col-md-3 item-card" title="JQuery" link="#" imagem="/assets/img/jquery.svg">JQuery é uma linguagem que facilita a vida do desenvolvedor, e também deixa a aplicação mais animada, muito pratico e fácil de usar.</app-card>
+    <app-card class="col-md-3 item-card" title="IOT" link="#" imagem="/assets/img/iot.svg">IOT, Essa não é uma linguagem, ela é um conceito onde se utiliza da internet para usar modulos sensoriais.</app-card>
+    <app-card class="col-md-3 item-card" title="Docker" link="#" imagem="/assets/img/docker.png">Docker essa tecnologia é inovadora, apesar de já existir o conceito de maquina virtual ela demostrou esse conceito com muita classe.</app-card>
+    <app-card class="col-md-3 item-card" title="PostgreSQL" link="#" imagem="/assets/img/docker.png">Docker essa tecnologia é inovadora, apesar de já existir o conceito de maquina virtual ela demostrou esse conceito com muita classe.</app-card>
+    <app-card  *ngFor="let subject of subjects" class="col-md-3 item-card" title="{{subject.title}}" link="#" imagem="{{subject.image}}">{{subject.text}}</app-card>
+  
+   
+</div>
