@@ -12,15 +12,15 @@ export class SubjectsService {
 
   setSubjects(subject: Subject)
   {
-    return this.http.post<Subject>('http://localhost:3000/subjects', {subject: subject});
+    return this.http.post<Subject>('http://54.233.105.4:3001/subjects', {subject: subject});
   }
   getSubjects(subject: Subject)
   {
-    return this.http.post<Subject>('http://localhost:3000/subjects/save', subject);
+    return this.http.post<Subject>('http://54.233.105.4:3001/subjects/save', subject);
   }
   listSubjects()
   {
-    return this.http.get<Subject[]>('http://localhost:3000/subjects');
+    return this.http.get<Subject[]>('http://54.233.105.4:3001/subjects');
   }
 }
 
